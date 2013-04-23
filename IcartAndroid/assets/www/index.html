@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/jquery.mobile.structure.min.css" />
+        <link rel="stylesheet" href="css/icart.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="cordova.js"></script>
+        <script src="js/appConfig.js"></script>
+        <script src="js/jquery/jquery.min.js"></script>
+        <script src="js/jquery/jquery.mobile.min.js"></script>
+        <script src="js/vendor/functions.js"></script>
+        <script>
+
+            function onDeviceReady() {
+
+                ///funcion de carga
+                document.addEventListener("backbutton", exitAppl, false);
+                
+                 $("#salir").click(function() {
+                    
+                    vibrate(300);
+                    exitAppl();
+                });
+
+            }
+
+        </script>
+
+
+    </head>
+    <body onload="init();">
+
+        <div data-role="page">
+            <div class="intro"><img src="css/images/logo.png"/></div>
+            <div>
+                <button data-ajax="false" onclick="goToUrl('miCarrito')" data-theme="b">Mi Carrito</button>
+                <button data-theme="a">Mi Lista</button>
+                <button id="salir" data-theme="c">Salir</button>
+            </div>             
+        </div>
+
+    </body>
+</html>
