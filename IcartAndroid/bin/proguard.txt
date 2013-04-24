@@ -1,4 +1,4 @@
-# view AndroidManifest.xml #generated:49
+# view AndroidManifest.xml #generated:51
 -keep class com.google.zxing.client.android.CaptureActivity { <init>(...); }
 
 # view ldpi\res/layout-ldpi/capture.xml #generated:26
@@ -8,7 +8,7 @@
 # view res/layout/search_book_contents_list_item.xml #generated:17
 -keep class com.google.zxing.client.android.book.SearchBookContentsListItem { <init>(...); }
 
-# view AndroidManifest.xml #generated:56
+# view AndroidManifest.xml #generated:77
 -keep class com.google.zxing.client.android.encode.EncodeActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:37
