@@ -17,12 +17,21 @@
 
                 ///funcion de carga
                 document.addEventListener("backbutton", exitAppl, false);
-                
-                 $("#salir").click(function() {
-                    
+
+                $("#salir").click(function() {
+
                     vibrate(300);
                     exitAppl();
                 });
+
+                ///funcion de carga y captura
+                $("#captura").click(function() {
+
+                    var randy = randomFromInterval(1, 5);
+                    var current = '<img src="images/00' + randy + '.jpg"/>';
+
+                    $("#publicidad").html(current);
+                })
 
             }
 
@@ -32,13 +41,34 @@
     </head>
     <body onload="init();">
 
-        <div data-role="page">
+
+        <!--lobi-->
+        <div data-role="page" id="index">
             <div class="intro"><img src="css/images/logo.png"/></div>
             <div>
-                <button data-ajax="false" onclick="goToUrl('miCarrito')" data-theme="b">Mi Carrito</button>
-                <button data-theme="a">Mi Lista</button>
-                <button id="salir" data-theme="c">Salir</button>
+                <a href="#miCarrito"  data-role="button" data-transition="turn">Mi Carrito</a>
+                <a href="#" data-role="button" data-transition="turn">Mi Lista</a>
+                <a href="#" id="salir" data-role="button" data-transition="turn">Salir</a>
             </div>             
+        </div>
+
+
+
+        <!--mi carrito-->
+        <div data-role="page" id="miCarrito">
+            <div data-role="header">
+                <a href="#index" data-transition="flip" data-icon="back">atrás</a>
+                <h1>Mi Carrito</h1>
+            </div>
+
+
+            <div id="publicidad" class="advertising"><br><br>Su Publicidad Aqui!</div>
+
+            <article>
+                <div style="text-align: center; border-bottom: 2pt;"><a href="#" id="captura" data-role="button" data-inline="true" data-transition="turn">Capturar</a></div>
+            </article> 
+
+
         </div>
 
     </body>
