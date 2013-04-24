@@ -18,6 +18,7 @@
 
                 ///funcion de carga
                 document.addEventListener("backbutton", exitAppl, false);
+                $("#productInfo").hide();
 
                 $("#salir").click(function() {
 
@@ -28,17 +29,20 @@
                 ///funcion de carga y captura
                 $("#captura").click(function() {
 
-                    /*
-                     var randy = randomFromInterval(1, 5);
-                     var current = '<img src="images/00' + randy + '.jpg"/>';
-                     $("#publicidad").html(current);
-                     */
+
                     window.plugins.barcodeScanner.scan(
                             function(result) {
-                                if (result.cancelled)
-                                    alert("the user cancelled the scan")
-                                else
-                                    alert("we got a barcode: " + result.text)
+                                if (result.cancelled) {
+                                    alert("operacion cancelada por elusuario");
+                                } else {
+                                    // alert("we got a barcode: " + result.text);
+                                    var cod = result.text;
+                                    infoProducto(cod)
+                                    var randy = randomFromInterval(1, 5);
+                                    var current = '<img src="images/00' + randy + '.jpg"/>';
+                                    $("#publicidad").html(current);
+
+                                }
                             },
                             function(error) {
                                 alert("scanning failed: " + error)
@@ -54,6 +58,14 @@
 
             }
 
+
+            function infoProducto(cod){
+            
+                $("#productInfo").show();
+                $("#producto").html('Producto 1');
+                $("#codigo").html(cod);
+                $("#precio").html('300');
+            }
 
 
         </script>
@@ -87,8 +99,26 @@
 
             <article>
                 <div style="text-align: center; border-bottom: 2pt;">
-                    <a href="#" id="captura" data-role="button" data-inline="true" data-transition="turn">Capturar</a>
+                    <a href="#" id="captura" data-role="button" data-inline="true" data-transition="turn">Capturar Nuevo</a>
                 </div>
+
+                <div data-role="fieldcontain" id="productInfo">
+                    <div> 
+                        <span>Producto</span>
+                        <span id="nombre">&nbsp;</span>
+                    </div>
+                    <div> 
+                        <span>Código</span>
+                        <span id="codigo">&nbsp;</span>
+                    </div>
+
+                    <div> 
+                        <span>Precio</span>
+                        <span id="precio">&nbsp;</span>
+                    </div>
+
+                </div>
+
             </article> 
 
 

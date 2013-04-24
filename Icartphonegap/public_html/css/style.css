@@ -24,7 +24,7 @@ div.intro{
 
 div.advertising{
     text-align: center;
-    height: 135px;
+    height: 200px;
     alignment-adjust: middle;
     background-color: #666;
     color: white;
@@ -42,12 +42,6 @@ div.content{
     height: 100%;
 }
 
-
-label{
-    font-size: 15px;
-    text-shadow: 2px 2px 5px #000;
-    font-weight: bolder;
-}
 
 div.message{
     border-width: 3px;
