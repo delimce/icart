@@ -1,10 +1,25 @@
-C:\proyectos\IcartAndroid\bin\classes.dex : \
-C:\proyectos\IcartAndroid\bin\classes\com\intersouth\icart\BuildConfig.class \
-C:\proyectos\IcartAndroid\bin\classes\com\intersouth\icart\MainActivity.class \
-C:\proyectos\IcartAndroid\bin\classes\com\intersouth\icart\R$attr.class \
-C:\proyectos\IcartAndroid\bin\classes\com\intersouth\icart\R$drawable.class \
-C:\proyectos\IcartAndroid\bin\classes\com\intersouth\icart\R$layout.class \
-C:\proyectos\IcartAndroid\bin\classes\com\intersouth\icart\R$string.class \
-C:\proyectos\IcartAndroid\bin\classes\com\intersouth\icart\R$xml.class \
-C:\proyectos\IcartAndroid\bin\classes\com\intersouth\icart\R.class \
-C:\proyectos\IcartAndroid\bin\dexedLibs\cordova-2.3.0-41032bc1e0f134ffe552a3887eb331a9.jar \
+C:\proyectos\icart\IcartAndroid\bin\classes.dex : \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\google\zxing\client\android\R$color.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\google\zxing\client\android\R$drawable.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\google\zxing\client\android\R$id.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\google\zxing\client\android\R$layout.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\google\zxing\client\android\R$raw.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\google\zxing\client\android\R$string.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\google\zxing\client\android\R$styleable.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\google\zxing\client\android\R$xml.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\google\zxing\client\android\R.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\intersouth\icart\BuildConfig.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\intersouth\icart\MainActivity.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\intersouth\icart\R$attr.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\intersouth\icart\R$color.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\intersouth\icart\R$drawable.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\intersouth\icart\R$id.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\intersouth\icart\R$layout.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\intersouth\icart\R$raw.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\intersouth\icart\R$string.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\intersouth\icart\R$styleable.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\intersouth\icart\R$xml.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\intersouth\icart\R.class \
+C:\proyectos\icart\IcartAndroid\bin\classes\com\phonegap\plugins\barcodescanner\BarcodeScanner.class \
+C:\proyectos\icart\IcartAndroid\bin\dexedLibs\classes-5cdb85f4ec090258c6a3b9c26ee39027.jar \
+C:\proyectos\icart\IcartAndroid\bin\dexedLibs\cordova-2.3.0-cbae3dc02f51fff86e79aeafa5eaab79.jar \

@@ -24,10 +24,12 @@ div.intro{
 
 div.advertising{
     text-align: center;
-    height: 160px;
+    height: 135px;
+    alignment-adjust: middle;
     background-color: #666;
     color: white;
     margin-bottom: 2pt;
+    margin-top: 2pt;
 
 }
 

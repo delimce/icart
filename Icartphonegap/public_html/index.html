@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/icart.min.css" />
         <link rel="stylesheet" href="css/style.css" />
         <script src="cordova.js"></script>
+        <script src="barcodescanner.js"></script>
         <script src="js/appConfig.js"></script>
         <script src="js/jquery/jquery.min.js"></script>
         <script src="js/jquery/jquery.mobile.min.js"></script>
@@ -27,13 +28,33 @@
                 ///funcion de carga y captura
                 $("#captura").click(function() {
 
-                    var randy = randomFromInterval(1, 5);
-                    var current = '<img src="images/00' + randy + '.jpg"/>';
+                    /*
+                     var randy = randomFromInterval(1, 5);
+                     var current = '<img src="images/00' + randy + '.jpg"/>';
+                     $("#publicidad").html(current);
+                     */
+                    window.plugins.barcodeScanner.scan(
+                            function(result) {
+                                if (result.cancelled)
+                                    alert("the user cancelled the scan")
+                                else
+                                    alert("we got a barcode: " + result.text)
+                            },
+                            function(error) {
+                                alert("scanning failed: " + error)
+                            }
+                    )
 
-                    $("#publicidad").html(current);
-                })
+
+                });
+
+
+
+
 
             }
+
+
 
         </script>
 
@@ -65,7 +86,9 @@
             <div id="publicidad" class="advertising"><br><br>Su Publicidad Aqui!</div>
 
             <article>
-                <div style="text-align: center; border-bottom: 2pt;"><a href="#" id="captura" data-role="button" data-inline="true" data-transition="turn">Capturar</a></div>
+                <div style="text-align: center; border-bottom: 2pt;">
+                    <a href="#" id="captura" data-role="button" data-inline="true" data-transition="turn">Capturar</a>
+                </div>
             </article> 
 
 
