@@ -18,53 +18,65 @@
 
                 ///funcion de carga
                 document.addEventListener("backbutton", exitAppl, false);
-                $("#productInfo").hide();
+
 
                 $("#salir").click(function() {
 
                     vibrate(300);
                     exitAppl();
+
                 });
 
                 ///funcion de carga y captura
                 $("#captura").click(function() {
 
-
-                    window.plugins.barcodeScanner.scan(
-                            function(result) {
-                                if (result.cancelled) {
-                                    alert("operacion cancelada por elusuario");
-                                } else {
-                                    // alert("we got a barcode: " + result.text);
-                                    var cod = result.text;
-                                    infoProducto(cod)
-                                    var randy = randomFromInterval(1, 5);
-                                    var current = '<img src="images/00' + randy + '.jpg"/>';
-                                    $("#publicidad").html(current);
-
-                                }
-                            },
-                            function(error) {
-                                alert("scanning failed: " + error)
-                            }
-                    )
+                    //var cod = randomFromInterval(1, 5000000);
+                    //infoProducto(cod);
+                     escanear();
 
 
                 });
 
 
+                var escanear = function() {
+                    $("#productInfo").hide();
+                    window.plugins.barcodeScanner.scan(
+                            function(result) {
+                                if (result.cancelled) {
+                                    alert("operacion cancelada por el usuario");
+                                } else {
+                                    // alert("we got a barcode: " + result.text);
+                                    var cod = result.text;
+                                    infoProducto(cod);
+                                }
+                            },
+                            function(error) {
+                                alert("scanning failed: " + error)
+                            }
+                    );
 
+                }
 
 
             }
 
 
-            function infoProducto(cod){
-            
+            function infoProducto(cod) {
+
+
+                cadena = String(cod);
+                randy = cadena.substring(cadena.length - 1, cadena.length);
+
                 $("#productInfo").show();
-                $("#producto").val('Producto 1');
-                $("#producto").val(cod);
-                $("#precio").val('300');
+                $("#nombre").html(nombres[randy]);
+                $("#codigo").html(cod);
+                $("#precio").html('Bs. ' + precios[randy]);
+                $("#cantidad").val(1);
+
+
+                var current = (randy <= 5) ? '<img src="images/00' + randy + '.jpg"/>' : '<br><br><br>IMAGEN NO DISPONIBLE';
+                $("#publicidad").html(current);
+
             }
 
 
@@ -90,7 +102,7 @@
         <!--mi carrito-->
         <div data-role="page" id="miCarrito">
             <div data-role="header">
-                <a href="#index" data-transition="flip" data-icon="back">atrás</a>
+                <a href="#index" data-transition="turn" data-direction="reverse" data-icon="back">atrás</a>
                 <h1>Mi Carrito</h1>
             </div>
 
@@ -101,20 +113,26 @@
                 <div style="text-align: center; border-bottom: 2pt;">
                     <a href="#" id="captura" data-role="button" data-inline="true" data-transition="turn">Capturar Nuevo</a>
                 </div>
-
-                <div data-role="fieldcontain" id="productInfo">
-                    <div> 
-                        <span>Producto</span>
-                        <span id="nombre">producto1</span>
+                <hr>
+                <div id="productInfo" style="display: none">
+                    <div class="separador"> 
+                        <span class="label">Producto</span>
+                        <span id="nombre">&nbsp;</span>
                     </div>
-                    <div> 
-                        <span>Código</span>
-                        <span id="codigo">producto1</span>
+                    <div class="separador"> 
+                        <span class="label">Código</span>
+                        <span id="codigo">&nbsp;</span>
                     </div>
 
-                    <div> 
-                        <span>Precio</span>
-                        <span id="precio">Precio</span>
+                    <div class="separador"> 
+                        <span class="label">Precio</span>
+                        <span id="precio">&nbsp;</span>
+                    </div>
+
+                    <div class="separador" data-role="fieldcontain"> 
+                        <span class="label">Cantidad</span>
+                        <textarea name="cantidad" id="cantidad">1</textarea>
+                       
                     </div>
 
                 </div>

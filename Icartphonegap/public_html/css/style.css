@@ -12,9 +12,9 @@ root {
 
 
 div{
-    font-size: 12px;
     padding: 0px 10px
 }
+
 
 div.intro{
     text-align: center;
@@ -24,7 +24,7 @@ div.intro{
 
 div.advertising{
     text-align: center;
-    height: 200px;
+    height: 180px;
     alignment-adjust: middle;
     background-color: #666;
     color: white;
@@ -34,14 +34,22 @@ div.advertising{
 }
 
 
+span.label{
+    font-weight: bold;
 
-div.content{
-    background-image:url('images/content.png');
-    background-repeat:no-repeat;
-    border-top: 0px;
-    height: 100%;
 }
 
+
+div.separador{
+    padding: 4px 5px 4px;
+    font-size: 16px;
+}
+
+#cantidad {
+    width : 60px;
+    height: 50px;
+    color: blue;
+}​
 
 div.message{
     border-width: 3px;

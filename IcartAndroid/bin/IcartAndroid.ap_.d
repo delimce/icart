@@ -98,6 +98,7 @@ C:\proyectos\icart\IcartAndroid\assets\www\css\images\icons-18-white.png \
 C:\proyectos\icart\IcartAndroid\assets\www\css\images\icons-36-black.png \
 C:\proyectos\icart\IcartAndroid\assets\www\css\images\icons-36-white.png \
 C:\proyectos\icart\IcartAndroid\assets\www\css\images\logo.png \
+C:\proyectos\icart\IcartAndroid\assets\www\images\000.jpg \
 C:\proyectos\icart\IcartAndroid\assets\www\images\001.jpg \
 C:\proyectos\icart\IcartAndroid\assets\www\images\002.jpg \
 C:\proyectos\icart\IcartAndroid\assets\www\images\003.jpg \
