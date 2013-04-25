@@ -29,11 +29,9 @@
 
                 ///funcion de carga y captura
                 $("#captura").click(function() {
-
-                    //var cod = randomFromInterval(1, 5000000);
-                    //infoProducto(cod);
-                     escanear();
-
+                    var cod = randomFromInterval(1, 5000000);
+                    infoProducto(cod);
+                    // escanear();
 
                 });
 
@@ -89,13 +87,21 @@
 
         <!--lobi-->
         <div data-role="page" id="index">
-            <div class="intro"><img src="css/images/logo.png"/></div>
-            <div>
-                <a href="#miCarrito"  data-role="button" data-transition="turn">Mi Carrito</a>
-                <a href="#" data-role="button" data-transition="turn">Mi Lista</a>
-                <a href="#" id="salir" data-role="button" data-transition="turn">Salir</a>
-            </div>             
+
+            <div data-role="content">
+                <div class="intro"><img src="css/images/logo.png"/></div>
+                <div>
+                    <a href="#miCarrito"  data-role="button" data-transition="turn">Mi Carrito</a>
+                    <a href="#miLista" data-role="button" data-transition="turn">Mi Lista</a>
+                    <a href="#" id="salir" data-role="button" data-transition="turn">Salir</a>
+                </div>   
+            </div>
+
         </div>
+
+
+
+
 
 
 
@@ -106,10 +112,9 @@
                 <h1>Mi Carrito</h1>
             </div>
 
+            <div data-role="content">
+                <div id="publicidad" class="advertising"><br><br>Su Publicidad Aqui!</div>
 
-            <div id="publicidad" class="advertising"><br><br>Su Publicidad Aqui!</div>
-
-            <article>
                 <div style="text-align: center; border-bottom: 2pt;">
                     <a href="#" id="captura" data-role="button" data-inline="true" data-transition="turn">Capturar Nuevo</a>
                 </div>
@@ -131,16 +136,37 @@
 
                     <div class="separador" data-role="fieldcontain"> 
                         <span class="label">Cantidad</span>
-                        <textarea name="cantidad" id="cantidad">1</textarea>
-                       
+                        <textarea name="cantidad" id="cantidad">1</textarea> 
                     </div>
-
+                    <hr>
+                    <div style="text-align: right">
+                        <a href="#" id="addTo" data-role="button" data-inline="true" data-transition="turn">Agregar</a>
+                    </div>
                 </div>
 
-            </article> 
-
+            </div>
 
         </div>
+
+
+
+
+        <!--mi lista -->
+        <div data-role="page" id="miLista">
+            <div data-role="header">
+                <a href="#index" data-transition="turn" data-direction="reverse" data-icon="back">atrás</a>
+                <h1>Mi Lista</h1>
+            </div>
+            
+            <div data-role="content">
+                
+            </div>
+            
+            
+        </div>
+
+
+
 
     </body>
 </html>
