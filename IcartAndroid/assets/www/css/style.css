@@ -24,7 +24,7 @@ div.intro{
 
 div.advertising{
     text-align: center;
-    height: 160px;
+    height: 140px;
     alignment-adjust: middle;
     background-color: #666;
     color: white;
@@ -42,7 +42,7 @@ span.label{
 
 div.separador{
     padding: 2px 2px 2px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 #cantidad {
@@ -50,6 +50,7 @@ div.separador{
     height: 50px;
     color: blue;
 }​
+
 
 div.message{
     border-width: 3px;

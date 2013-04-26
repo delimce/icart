@@ -104,7 +104,12 @@ C:\proyectos\icart\IcartAndroid\assets\www\images\002.jpg \
 C:\proyectos\icart\IcartAndroid\assets\www\images\003.jpg \
 C:\proyectos\icart\IcartAndroid\assets\www\images\004.jpg \
 C:\proyectos\icart\IcartAndroid\assets\www\images\005.jpg \
+C:\proyectos\icart\IcartAndroid\assets\www\images\006.jpg \
+C:\proyectos\icart\IcartAndroid\assets\www\images\007.jpg \
+C:\proyectos\icart\IcartAndroid\assets\www\images\008.jpg \
+C:\proyectos\icart\IcartAndroid\assets\www\images\009.jpg \
 C:\proyectos\icart\IcartAndroid\assets\www\js\appConfig.js \
+C:\proyectos\icart\IcartAndroid\assets\www\js\icartFunctions.js \
 C:\proyectos\icart\IcartAndroid\assets\www\js\jquery \
 C:\proyectos\icart\IcartAndroid\assets\www\js\vendor \
 C:\proyectos\icart\IcartAndroid\assets\www\js\jquery\jqm-datebox.core.min.js \

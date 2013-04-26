@@ -12,13 +12,15 @@
         <script src="js/jquery/jquery.min.js"></script>
         <script src="js/jquery/jquery.mobile.min.js"></script>
         <script src="js/vendor/functions.js"></script>
+        <script src="js/icartFunctions.js"></script>
         <script>
 
             function onDeviceReady() {
 
                 ///funcion de carga
                 document.addEventListener("backbutton", exitAppl, false);
-
+                window.localStorage.setItem("TOTAL", 0);
+                window.localStorage.setItem("COD", 0);
 
                 $("#salir").click(function() {
 
@@ -29,51 +31,35 @@
 
                 ///funcion de carga y captura
                 $("#captura").click(function() {
-                    var cod = randomFromInterval(1, 5000000);
-                    infoProducto(cod);
-                    // escanear();
+                    
+                    escanear();
+                    
+                    
+                  //  var cod = randomFromInterval(1, 5000000);
+                    
+                  //  infoProducto(cod);
 
                 });
 
 
-                var escanear = function() {
+                ///funcion para agregar al carrito
+                $("#addTo").click(function() {
+                    addToCart();
+
+                });
+
+                ///funcion para cancelar operacion
+                $("#cancelIt").click(function() {
+
                     $("#productInfo").hide();
-                    window.plugins.barcodeScanner.scan(
-                            function(result) {
-                                if (result.cancelled) {
-                                    alert("operacion cancelada por el usuario");
-                                } else {
-                                    // alert("we got a barcode: " + result.text);
-                                    var cod = result.text;
-                                    infoProducto(cod);
-                                }
-                            },
-                            function(error) {
-                                alert("scanning failed: " + error)
-                            }
-                    );
+                    $("#car").show();
 
-                }
+                });
 
 
-            }
+             
 
 
-            function infoProducto(cod) {
-
-
-                cadena = String(cod);
-                randy = cadena.substring(cadena.length - 1, cadena.length);
-
-                $("#productInfo").show();
-                $("#nombre").html(nombres[randy]);
-                $("#codigo").html(cod);
-                $("#precio").html('Bs. ' + precios[randy]);
-                $("#cantidad").val(1);
-
-
-                var current = (randy <= 5) ? '<img src="images/00' + randy + '.jpg"/>' : '<br><br><br>IMAGEN NO DISPONIBLE';
-                $("#publicidad").html(current);
 
             }
 
@@ -98,12 +84,6 @@
             </div>
 
         </div>
-
-
-
-
-
-
 
         <!--mi carrito-->
         <div data-role="page" id="miCarrito">
@@ -140,31 +120,41 @@
                     </div>
                     <hr>
                     <div style="text-align: right">
-                        <a href="#" id="addTo" data-role="button" data-inline="true" data-transition="turn">Agregar</a>
+                        <a href="#" id="addTo" data-role="button" data-inline="true">Agregar</a>
+                        <a href="#" id="cancelIt" data-role="button" data-inline="true">Cancelar</a>
                     </div>
+                </div>
+
+                <div id="car">
+                    <ul id="carrito" data-role="listview">
+
+                    </ul>
+                    <p style="text-align: right"> <b>TOTAL:&nbsp;</b><span id="total">&nbsp;</span> </p>
                 </div>
 
             </div>
 
         </div>
 
-
-
-
         <!--mi lista -->
         <div data-role="page" id="miLista">
             <div data-role="header">
                 <a href="#index" data-transition="turn" data-direction="reverse" data-icon="back">atrás</a>
-                <h1>Mi Lista</h1>
+                <h1>Lista de compras</h1>
             </div>
-            
             <div data-role="content">
-                
-            </div>
-            
-            
-        </div>
 
+                <ul id="miLista" data-role="listview">
+                    <li><h3>Producto</h3>
+                        <p class="edit">
+                            <b>Cantidad</b>&nbsp;1
+                        </p>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
 
 
 
