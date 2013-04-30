@@ -31,7 +31,6 @@ var escanear = function() {
     window.plugins.barcodeScanner.scan(
             function(result) {
                 if (result.cancelled) {
-                    alert("operacion cancelada por el usuario");
                     code = 0;
                 } else {
                     code = result.text;
@@ -44,8 +43,6 @@ var escanear = function() {
                 code = 0;
             }
     );
-
-    return code;
 
 }
 
@@ -70,4 +67,15 @@ function addToCart() {
 
     $('#carrito').append(item);
     $('#carrito').listview('refresh');
+}
+
+
+function addToList() {
+
+    var item = '<li><h3 style="color:blue">' + $("#nombre2").val() + '</h3><p class="edit"> <b>Cant:</b>&nbsp;' + $("#cant2").val() + '&nbsp;</span></p></li>';
+    
+
+    $('#prodList').append(item);
+    $('#prodList').listview('refresh');
+
 }

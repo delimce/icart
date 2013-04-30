@@ -31,13 +31,11 @@
 
                 ///funcion de carga y captura
                 $("#captura").click(function() {
-                    
-                    escanear();
-                    
-                    
-                  //  var cod = randomFromInterval(1, 5000000);
-                    
-                  //  infoProducto(cod);
+
+                      escanear();
+
+                 //   var cod = randomFromInterval(1, 5000000);
+                 //   infoProducto(cod);
 
                 });
 
@@ -55,10 +53,14 @@
                     $("#car").show();
 
                 });
+                
+                
+                   ///funcion para agregar a la lista
+                $("#addTo2").click(function() {
 
+                   addToList();
 
-             
-
+                });
 
 
             }
@@ -114,15 +116,21 @@
                         <span id="precio">&nbsp;</span>
                     </div>
 
-                    <div class="separador" data-role="fieldcontain"> 
-                        <span class="label">Cantidad</span>
-                        <textarea name="cantidad" id="cantidad">1</textarea> 
+                    <div class="separador">
+                        <div class="ui-block-c">
+
+                            <span class="label">Cantidad</span>
+                            <input type="number" name="cantidad"  id="cantidad">
+
+                        </div>
                     </div>
-                    <hr>
-                    <div style="text-align: right">
+                    <p>&nbsp;</p><p>&nbsp;</p>
+                    <div class="separador">
                         <a href="#" id="addTo" data-role="button" data-inline="true">Agregar</a>
                         <a href="#" id="cancelIt" data-role="button" data-inline="true">Cancelar</a>
                     </div>
+
+
                 </div>
 
                 <div id="car">
@@ -144,13 +152,37 @@
             </div>
             <div data-role="content">
 
-                <ul id="miLista" data-role="listview">
-                    <li><h3>Producto</h3>
-                        <p class="edit">
-                            <b>Cantidad</b>&nbsp;1
-                        </p>
-                    </li>
+
+                <ul id="prodList" data-role="listview">
+                    
                 </ul>
+
+                <br>
+                <div data-role="collapsible" data-content-theme="c">
+                    <h3>Agregar Producto</h3>
+
+
+
+                    <fieldset style="font-size: 12px">
+                        <div>
+                            <label class="label" for="nombre2">Producto</label>
+                            <input type="text" id="nombre2" name="nombre2">
+                        </div>
+                        <div class="ui-bar ui-grid-c">
+                            <div class="ui-block-c">
+                                <label class="label" for="cant2">Cantidad</label>
+                                <input type="number" id="cant2" name="cant2">
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#" id="addTo2" data-role="button" data-inline="true">Agregar</a>
+                        </div>
+                    </fieldset>
+
+
+
+
+                </div>
 
             </div>
 

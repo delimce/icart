@@ -45,12 +45,10 @@ div.separador{
     font-size: 14px;
 }
 
-#cantidad {
+#cantidad, #cant2{
     width : 60px;
-    height: 50px;
     color: blue;
 }​
-
 
 div.message{
     border-width: 3px;
